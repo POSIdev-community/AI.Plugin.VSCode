@@ -30,7 +30,6 @@ The path where it will be installed:
 You can start a project scan:
 
 * By clicking `[PT AI] Start scan`
-* By clicking `[PT AI] Start scan`
 * By saving changes in a project (if you select `On saving` for the `Trigger scan` setting)
 * With the `Start scan` command
 * With the `Start full scan` command
@@ -117,7 +116,7 @@ To compare two results within a project, select two scans in the `[PT AI] Scan h
 
 > ***Note.** The comparing function and the `[PT AI] Scan history` view are available only if you enable the developer mode in the plugin settings.*
 
-![AI-compare](/media/readme//AI-compare.gif)
+![AI-compare](/media/readme/AI-compare.gif)
 
 ## Commands and settings
 
@@ -129,7 +128,7 @@ To compare two results within a project, select two scans in the `[PT AI] Scan h
 </details>
 <details>
     <summary><code>PT Application Inspector: Start full scan</code></summary>
-    <p>Start a project scan.</p>
+    <p>Start a full project scan.</p>
 </details>
 <details>
     <summary><code>PT Application Inspector: Stop scan</code></summary>
