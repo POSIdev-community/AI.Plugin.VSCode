@@ -1,6 +1,6 @@
 ## Overview
 
-The PT Application Inspector plugin allows finding security vulnerabilities and undocumented functionality in your application code as you write it. (PHP, Python, C#, and VB.NET are supported). 
+The PT Application Inspector plugin allows finding security vulnerabilities and undocumented functionality in your application code as you write it. (PHP is supported). 
 
 With the built-in analysis modules, the plugin highlights not only source code vulnerabilities and configuration file flaws but also vulnerable third-party components and libraries used in application development.
 
@@ -185,10 +185,10 @@ For the PT AI Application Inspector plugin to work correctly, the following tech
 
 Supported 64-bit OSs:
 * Debian version 11.1 or later
-* Fedora Workstation version 32 or later
+* Fedora Workstation version 34 or later
 * OpenSUSE version 15.3 or later
-* Ubuntu Desktop version 19.10 or later
-* Windows 10 and Windows Server 2019
+* Ubuntu Desktop version 20.04 or later
+* Windows 10
 
 Supported macOSs:
 * Big Sur version 11.5 or later

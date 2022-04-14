@@ -1,0 +1,55 @@
+LICENSE AGREEMENT WITH THE END USER OF POSITIVE TECHNOLOGIES APPLICATION INSPECTOR IDE PLUGIN
+
+1. General provisions
+
+1.1. This License Agreement (hereinafter the Agreement) represents an agreement between the end user (hereinafter the User) and Positive Technologies (hereinafter the Rightholder) with regard to Positive Technologies Application Inspector IDE Plugin (hereinafter the Software, also referred as PT AI IDE Plugin in the user interface and documentation).
+1.2. The Software can be used only under the terms of this Agreement. By using the Software, the User agrees to fulfill the terms and conditions of the Agreement. If the User does not accept the terms and conditions of this Agreement in full, the User shall not use the Software in any way, including keeping a copy of the Software on data storage devices.
+1.3. The right to use the Software is provided to the User on the basis of a license agreement concluded with the Rightholder, a sublicense agreement with the Rightholder's authorized partner, or another type of contract (hereinafter the Contract) that provides the User with a non-exclusive license to use the Software. In this case, the Software can be used only if the terms of both the Contract and the Agreement are fully accepted and followed. In case of direct contradiction between the terms of the Contract and the respective terms of this Agreement, the terms specified in the Contract shall apply. However, in all other cases the User agrees to fulfill the terms and conditions of the Agreement.
+1.4. The Rightholder may provide the User with a hard copy of the license as evidence that the Software is used legally. Restrictions on the usage of this Software regarding the terms and other aspects may be specified in the above-mentioned hard copy of the license. Restrictions specified in the hard copy of the license constitute an integral part of this Agreement.
+
+2. Legal usage
+
+2.1. The User agrees to use the Software for personal, noncommercial purposes and in accordance with its direct purpose, namely, for the analysis of source code security of developed applications. The User agrees not to use the Software for provision of services to third parties, unless otherwise specified in the appropriate Contract.
+2.2. The User is granted the right to reproduce the Software, which is limited to installing and running the Software. Other permitted methods of the Software use shall be specified in the corresponding Contract. Any method of using the Software that is not expressly specified in this Agreement or in the corresponding Contract shall not be permitted.
+2.3. Software installation and launching is limited to one hardware or virtual platform only, unless otherwise explicitly specified in the corresponding Contract. Other permitted methods of installing and launching the Software, including transferring the Software to other hardware platforms, may be specified in the corresponding Contract.
+2.4. The right to use the Software (the term of the license) is granted for the entire period of validity of exclusive rights if the User does not breach the terms of the Agreement. The license expires on the date when the User breaches the terms of the Agreement.
+2.5. The right to use the Software under this Agreement is granted free of charge. The licensed territory shall be worldwide.
+2.6. The User, being an eligible owner of an instance of the Software, may create one backup copy, provided that such copy is used solely as an archive backup or to replace the legally acquired instance in case it is lost, destroyed or unusable. Such backup copy should contain all copyright notices that the original copy contains.
+2.7. The User shall not modify, adapt, localize, or decompile the Software except as specified under the current legislation of the Russian Federation, nor shall the User make any changes to the source code of the Software.
+2.8. The User shall not use the Software to provide services (including consulting) to third parties, including those provided on a free-of-charge basis.
+2.9. The User shall not distribute, lease, replicate, or transfer the Software to third parties, unless otherwise specified in the corresponding Contract, or use it for fraudulent or other illegal purposes.
+
+3. Copyright
+
+3.1. The Rightholder of the Software is Positive Technologies.
+3.2. All rights (including the right for the content that can become available as a result of the Software usage) are the property of the appropriate rightholder and are protected by the current intellectual property law of the Russian Federation.
+3.3. The Software includes third-party software, which is not the subject of intellectual property rights or other rights of the Rightholder. The usage of such third-party software is governed by respective licenses (license agreements) issued by the rightholders of such software. By accepting the terms and conditions of this Agreement, the User therefore accepts the terms and conditions specified in the licenses (license agreements) of the third-party software.
+3.4. All rights that are not directly and explicitly granted by this Agreement and/or a Contract shall remain with the Rightholder.
+3.5. The User may not change or remove the Rightholder's and third parties' copyright information from the Software.
+
+4. Telemetry
+
+4.1. The User acknowledges and agrees that in the process of using the Software according to its functional purpose, the Software may automatically transfer to the Rightholder the following information:
+4.1.1. Information about the environment
+4.1.2. Analysis errors
+4.1.3. Time of completing the analysis stages
+4.2. The Rightholder guarantees that any data transferred by the Software in accordance with Clause 4.1 of the Agreement will be used by the Rightholder only to improve the Software performance stability and efficiency.
+4.3. The Rightholder guarantees that collection of data in accordance with clause 4.1 of the Agreement under no circumstances is aimed at gathering the User's personal data. If transmitted data contains the User's personal data, the Rightholder guarantees that such data will be processed solely for the purposes of statistics and research, and processing will include only depersonalization and destruction. Under no circumstances will this data be used for any other purposes including promotion of goods, labor, and services in the market, or political agitation.
+4.4. Automatic data transmission as per Clause 4.1 of the Agreement can be enabled or disabled during the Software installation or operation.
+4.5. The Rightholder and its affiliates have the right to disclose the transferred data to third parties only in depersonalized form, that is, without personal data or confidential information. The Rightholder guarantees that transmitted data will not be disclosed to any third party in any way other than as specified in this clause.
+4.6. The User accepts and agrees that the data transmitted by the Software as per Clause 4.1 of the Agreement can potentially be a state secret. The User undertakes not to enable automatic information transmission when using the Software in systems for which the information covered by Clause 4.1 of the Agreement can be a state secret.
+
+5. Limited warranty
+
+5.1. The Software is provided "as is." The Rightholder does not provide any guarantees in relation to the failure-free and uninterrupted operation of the Software, or the correspondence of the Software with the specific goals and expectations of the User. The Rightholder makes no warranties that the Software is error-free. Nor is it liable for direct or indirect damages resulting from potential faults in the Software, as well as damages that might result from using or impossibility to use the Software.
+
+6. Liability
+
+6.1. The User shall be liable for any breach of the terms of this Agreement and for the illegal usage of the Software in accordance with the current legislation of the Russian Federation.
+6.2. The Rightholder reserves the right to terminate the User's license unilaterally in case of any breach of the terms and conditions of this Agreement and in case of illegal usage of the Software.
+
+7. Other provisions
+
+7.1. This Agreement is governed by the law of the Russian Federation.
+7.2. The Rightholder reserves the right to amend the terms and conditions of this Agreement and notify the User of such amendments. Information published at the Rightholder's website shall be considered due notice under this Agreement. The User agrees that information about the current version of the Agreement containing such amended Agreement terms shall be considered due notice as per this clause if placed by the Rightholder as an element of the interface in the Software update installation package. If the User installs the Software update installation package containing amended Agreement terms, this is considered an implicative action signifying that the User agrees to such amended Agreement terms.
+7.3. If the User disagrees with any terms of the Agreement relayed to the User in the manner described in clause 6.2 of the Agreement, the User must abort installation and must not use the Software update installation package containing such amended Agreement terms. The User has the right to continue using the Software and the Software update packages provided to the User by the Rightholder until the Agreement terms are changed.
