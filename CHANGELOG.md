@@ -1,6 +1,6 @@
 ## [1.1.0]
 
-- Added ability to scan Java applications
+- Added the ability to scan Java applications
 
 ## [1.0.0]
 
