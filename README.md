@@ -1,8 +1,17 @@
 ## Overview
 
-The PT Application Inspector plugin allows finding security vulnerabilities and undocumented functionality in your application code as you write it. (PHP is supported). 
+The PT Application Inspector plugin allows finding security vulnerabilities and undocumented functionality in your application code as you write it. (PHP and Java are supported). 
 
 With the built-in analysis modules, the plugin highlights not only source code vulnerabilities and configuration file flaws but also vulnerable third-party components and libraries used in application development.
+
+## Installing the plugin
+
+To install the plugin:
+1. In the `Activity bar`, go to `Extensions`.
+2. Click `…` and then select `Install from VSIX`.
+3. Select the plugin file.
+
+The plugin is now installed.
 
 ## Enabling and disabling the plugin
 
