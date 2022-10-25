@@ -1,17 +1,20 @@
 ## Overview
 
-The PT Application Inspector plugin allows finding security vulnerabilities and undocumented functionality in your application code as you write it. (PHP and Java are supported). 
+The PT Application Inspector plugin allows finding security vulnerabilities and undocumented functionality in your application code as you write it. (PHP, Java, JavaScript, TypeScript are supported). 
 
 With the built-in analysis modules, the plugin highlights not only source code vulnerabilities and configuration file flaws but also vulnerable third-party components and libraries used in application development.
 
-## Installing the plugin
+<details>
+  <summary>Manual installing the plugin</summary>
 
-To install the plugin:
-1. In the `Activity bar`, go to `Extensions`.
-2. Click `…` and then select `Install from VSIX`.
-3. Select the plugin file.
+    To install the plugin:
+    1. In the `Activity bar`, go to `Extensions`.
+    2. Click `…` and then select `Install from VSIX`.
+    3. Select the plugin file.
 
-The plugin is now installed.
+    The plugin is now installed.
+
+</details>
 
 ## Enabling and disabling the plugin
 
@@ -175,7 +178,7 @@ The command is available while a scan is running.</p>
 
 ### Settings
 
-- **Allow telemetry collection**. Collect generalized data about scanned code and send it to Positive Technologies. To see a sample of collected data, click [here](/media/readme/telemetryExample.json). For details, refer to the privacy statement. Default: enabled.
+- **Allow telemetry collection**. Collect generalized data about scanned code and send it to our team. To see a sample of collected data, click [here](/media/readme/telemetryExample.json). For details, refer to the privacy statement. Default: enabled.
 - **Analyzer log level**. An analyzer log level. Default: error.
 - **Automatically enable for any project**. Enable the plugin automatically for all projects without explicit confirmation from a user. Default: disabled.
 - **Developer mode**. Activate the following functionality: `[PT AI] Scan history` view, comparing two scan results within a project, plugin logs in the output. Default: disabled.
@@ -188,7 +191,7 @@ The command is available while a scan is running.</p>
 ## Requirements
 For the PT AI Application Inspector plugin to work correctly, the following technical requirements must be met:
 
-* Visual Studio Code IDE version 1.65.0 or later
+* Visual Studio Code IDE version 1.72.0 or later
 * 8 GB of RAM
 * 5 GB of free disk space
 
@@ -203,11 +206,8 @@ Supported macOSs:
 * Big Sur version 11.5 or later
 * Monterey version 12.0.0 or later
 
-## License
-[EULA](LICENSE.txt)
-
 ## Privacy statement 
-By default, the PT Application Inspector plugin collects anonymous usage data and sends it to Positive Technologies to help us understand how to improve the product. Positive Technologies does not pass collected information to third parties. Source code or IP addresses are not collected. You can stop data collection by disabling the `Allow telemetry collection` setting.
+By default, the PT Application Inspector plugin collects anonymous usage data and sends it to our team to help us understand how to improve the product. We do not pass collected information to third parties. Source code or IP addresses are not collected. You can stop data collection by disabling the `Allow telemetry collection` setting.
 
 ---
 **Enjoy!**
