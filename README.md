@@ -1,6 +1,6 @@
 ## Overview
 
-The PT Application Inspector plugin allows finding security vulnerabilities and undocumented functionality in your application code as you write it. (PHP, Java, JavaScript, TypeScript are supported). 
+The PT Application Inspector plugin allows finding security vulnerabilities and undocumented functionality in your application code as you write it. (PHP, Java, JavaScript, TypeScript, Python are supported). 
 
 With the built-in analysis modules, the plugin highlights not only source code vulnerabilities and configuration file flaws but also vulnerable third-party components and libraries used in application development.
 

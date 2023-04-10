@@ -1,3 +1,7 @@
+## [1.3.0]
+
+- Added the ability to scan Python applications
+
 ## [1.2.0]
 
 - Added the ability to scan JavaScript and TypeScript applications
