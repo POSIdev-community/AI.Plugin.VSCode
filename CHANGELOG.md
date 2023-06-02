@@ -1,3 +1,10 @@
+## [2.0.0]
+
+- Added the possibility of teamwork - integration with Application Inspector Enterprise
+- The pre-check stage for the vulnerable components search module has been accelerated
+- Scan settings format changed (.aiproj file)
+- Minor bugfixes
+
 ## [1.3.0]
 
 - Added the ability to scan Python applications
