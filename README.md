@@ -1,12 +1,12 @@
 ## Overview
 
-The PT Application Inspector plugin finds vulnerabilities and undocumented features in application code while it is being written (supported languages: PHP, Java, JavaScript, TypeScript, Python). Built-in analysis modules detect source code vulnerabilities, configuration file errors, and vulnerable third-party components and libraries used in the application development process.
+The PT Application Inspector plugin finds vulnerabilities and undocumented features in application code while it is being written (supported languages: PHP, Python, Java, JavaScript, TypeScript). Built-in analysis modules detect source code vulnerabilities, configuration file errors, and vulnerable third-party components and libraries used in the application development process.
 
 ## How it works
 
 ### Enabling and disabling the plugin
 
-You can enable or disable the plugin in the open project folder. If it is not the first time you're opening the project, the plugin is enabled automatically (scan and action history is saved). You can also set up the plugin to be automatically enabled when a new project is opened.
+You can enable or disable the plugin in the open project folder. If it is not the first time you are opening the project, the plugin is enabled automatically (scan and action history is saved). You can also set up the plugin to be automatically enabled when a new project is opened.
 
 When the plugin is enabled, the **.ai** folder is created in the project. This folder contains a database, log files, and a configuration file.
 
@@ -17,19 +17,19 @@ When the plugin is enabled, the **.ai** folder is created in the project. This f
 For the plugin to operate correctly, the PT Application Inspector code analyzer is required. You can install the analyzer in the Visual Studio Code interface by clicking **Download analyzer** in the pop-up window.
 
 The path for code analyzer installation:
-* in Windows: `%LOCALAPPDATA%\Application Inspector Analyzer`
-* in Linux: `~/application-inspector-analyzer`
-* in macOS:` /Library/Application-Inspector-Analyzer`
+* In Windows: `%LOCALAPPDATA%\Application Inspector Analyzer`
+* In Linux: `~/application-inspector-analyzer`
+* In macOS:` /Library/Application-Inspector-Analyzer`
 
 ![Installing the code analyzer](/media/readme/AI-downoload-analyzer.gif)
 
 ### Scanning a project
 
 You can start a project scan in the following ways:
-* by clicking **[PT AI] Start scan** in the status bar in the lower part of the window
-* when saving project changes (if you selected **On saving** for the **Trigger scan** parameter)
-* by running the command `PT Application Inspector: Start scan`
-* by running the command `PT Application Inspector: Start full scan`.
+* By clicking **[PT AI] Start scan** in the status bar in the lower part of the window
+* When saving project changes (if you selected **On saving** for the **Trigger scan** parameter)
+* By running the command `PT Application Inspector: Start scan`
+* By running the command `PT Application Inspector: Start full scan`.
 
 ***Note.** Before scanning, all changes to the project are automatically saved.*
 
@@ -45,11 +45,11 @@ You can stop a project scan by running the command `PT Application Inspector: St
 
 ## Analyzing scan results
 
-You can find the list of all detected vulnerabilities on the **PROBLEMS** tab of the scan results panel. If you click a vulnerability in the list, the line with its exit point gets highlighted in the code editor.
+You can find the list of all detected vulnerabilities on the **PROBLEMS** tab. If you click a vulnerability in the list, the line with its exit point gets highlighted in the code editor.
 
-The **[PT AI] DATA FLOW ** section contains a data flow diagram that shows how each process converts its input data to output data and how processes interact.
+The **[PT AI] DATA FLOW** section contains a data-flow diagram that shows how each process converts its input data to output data and how processes interact.
 
-The data flow diagram consists of the following sections:
+The data-flow diagram consists of the following sections:
 * **Entry point**. The starting point of the control flow.
 * **Data entry point**. A file and code line with coordinates of data entry.
 * **Data changes**. The description of one or several functions that modify potentially harmful input data. This section may not be displayed on the diagram if input data was not modified.
@@ -78,16 +78,16 @@ When you scroll through the sections of the diagram, the vulnerability informati
 
 Several vulnerabilities can have the same exit point. If these vulnerabilities belong to the same type, they are grouped together and displayed as one problem with different exploitation options. In **[PT AI]** sections, use the left and right arrows to view detailed information about such vulnerabilities.
 
-***Note.** If you confirm one vulnerability from the group, the whole problem will be confirmed automatically. To discard an entire problem, you must discard all the vulnerabilities in the group.*
+***Note**. If you confirm one vulnerability from the group, the whole problem will be confirmed automatically. To discard an entire problem, you must discard all the vulnerabilities in the group.*
 
 ![Group of vulnerabilities](/media/readme/AI-group.gif)
 
 ### Managing detected vulnerabilities
 
 The PT Application Inspector plugin contains a set of tools for managing detected vulnerabilities. With these tools, you can do the following:
-* exclude vulnerabilities from scan results by selecting **Suppress the vulnerability: exclude it from the PT AI scan results** in the vulnerability context menu on the **PROBLEMS** tab
-* filter vulnerabilities by severity, status, and exclusion from scan results by running the command `PT Application Inspector: Show vulnerabilities`.
-* confirm and discard vulnerabilities by clicking the X and checkmark buttons in **[PT AI]** sections
+* Exclude vulnerabilities from scan results by selecting **Suppress the vulnerability: exclude it from the PT AI scan results** in the vulnerability context menu on the PROBLEMS **tab**
+* Filter vulnerabilities by severity, status, and exclusion from scan results by running the command `PT Application Inspector: Show vulnerabilities`.
+* Confirm and discard vulnerabilities by clicking the X and checkmark buttons in **[PT AI]** sections
 
 ![Excluding a vulnerability from scan results](/media/readme/AI-actions.gif)
 
@@ -99,7 +99,7 @@ The PT Application Inspector plugin contains a set of tools for managing detecte
 
 You can compare results of two scans within a project. To do this, under **[PT AI] SCAN HISTORY**, select the scans you need and then select **Compare scan results** in the context menu.
 
-***Note.** The **[PT AI] SCAN HISTORY** section is displayed only in the developer mode.*
+***Note**. The **[PT AI] SCAN HISTORY** section is displayed only in the developer mode.*
 
 ![Comparing scan results](/media/readme/AI-compare.gif)
 
@@ -111,27 +111,29 @@ To configure the integration:
 
 1. Enter the PT AI Enterprise Server URL and sign in to PT AI Enterprise Edition via your SSO system.
 
-   ![Connecting to PT AI Enterprise Server](/media/readme/AI-connect-to-server.gif)
+    ![Connecting to PT AI Enterprise Server](/media/readme/AI-connect-to-server.gif)
 1. Synchronize a local project in Visual Studio Code and a project in PT AI Enterprise Server in one of the following ways:
 
-   * upload a local project to PT AI Enterprise Server
+   * Upload a local project to PT AI Enterprise Server
 
-   * connect a local project to an existing project in PT AI Enterprise Server
+   * Connect a local project to an existing project in PT AI Enterprise Server
 
-   * download a project from PT AI Enterprise Server to a local file system
+   * Download a project from PT AI Enterprise Server to a local file system
 
    ![Synchronizing projects](/media/readme/AI-map-project.gif)
-1. Work with code, scan, confirm, and discard vulnerabilities as normal.
+1. Work with code, scan, confirm, and discard vulnerabilities as you normally do.
 
 The statuses of detected vulnerabilities are synchronized automatically, and all the team members can assess the current threat level.
 
-For more information about integration, see the PT AI Enterprise Edition User Guide.
+For more information about the integration, see the PT AI Enterprise Edition User Guide.
 
 ## Plugin commands and settings
 
+
+
 ### Plugin commands
 
-To start working with the plugin, you can enter the following commands into command palette:
+To start working with the plugin, you can enter the following commands into the command palette:
 * `PT Application Inspector: Start scan`. Start a project scan.
 * `PT Application Inspector: Start full scan`. Start a full scan of a project.
 * `PT Application Inspector: Stop scan`. Stop the scan.
@@ -162,7 +164,7 @@ The plugin configuration page contains the following settings:
 * **Number of days to store log files**. The number of days log files are stored. The default value is "30."
 * **Number of scan results**. Maximum number of scan results saved in the scan result history. The default value is "10." This setting is available only in the developer mode. If the limit is exceeded, each new scan result deletes the oldest result.
 * **Trigger scan**. The start scan condition: manually on clicking start or automatically on a project file change. The default value is "manually."
-* **Use all available resources for scanning**. Using all available RAM and CPU resources to increase scanning speed. By default, the setting is disabled.
+* **Use all available resources for scanning**. The use of all available RAM and CPU resources to increase scanning speed. By default, the setting is disabled.
 * **AI server URL**. The address of connected PT AI Enterprise Server.
 * **Username**. The name of an authorized user.
 
@@ -174,10 +176,11 @@ For the correct operation of the PT Application Inspector plugin, the following 
 * 5 GB of free hard drive space
 
 Supported 64-bit OS:
-* Debian 11.1 or later
-* Fedora Workstation 34 or later
-* OpenSUSE 15.3 or later
-* Ubuntu Desktop 20.04 or later
+* Debian 11 Bullseye or later
+* Fedora Workstation 38 or later
+* OpenSUSE Leap 15.5 or later
+* Ubuntu 22.04 LTS or later
+* Ubuntu 23.04 or later
 * Windows 10
 
 Supported macOS:
@@ -186,4 +189,4 @@ Supported macOS:
 
 ## Privacy statement
 
-By default, the PT Application Inspector plugin collects anonymous usage data and sends it to our experts so that they can better understand how to improve the product. We do not share the collected information with third parties. We do not collect source code or IP addresses. To disable data collection, disable the **Allow telemetry collection** setting.
+By default, the PT Application Inspector plugin collects anonymous usage data and sends it to our experts so that they can better understand how to improve the product. We do not share the collected information with third parties. We do not collect source code or IP addresses. To stop the data collection, disable the **Allow telemetry collection** setting.

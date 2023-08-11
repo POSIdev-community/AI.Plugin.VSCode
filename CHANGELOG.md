@@ -1,3 +1,8 @@
+## [2.0.1]
+
+- PT AI 4.5.0 API support added
+- Minor bugfixes
+
 ## [2.0.0]
 
 - Added the possibility of teamwork - integration with Application Inspector Enterprise
