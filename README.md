@@ -182,6 +182,7 @@ Supported 64-bit OS:
 * Ubuntu 22.04 LTS or later
 * Ubuntu 23.04 or later
 * Windows 10
+* ALT Linux OS in the test mode
 
 Supported macOS:
 * Big Sur 11.5 or later

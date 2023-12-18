@@ -1,3 +1,16 @@
+## [2.1.0]
+
+- You can now confirm, discard vulnerabilities from scan results in their context menu in the code editor (quick fix actions)
+- For the Precheck scanning stage, the Feeds processing step is now displayed
+- The [PT AI] SCAN HISTORY section is now displayed not only in developer mode
+- Entering the PT Application Inspector: Show vulnerabilities command now automatically opens the PROBLEMS tab
+- In case of an error in the code analyzer installation, a pop-up window now displays the Try
+again button, which you can click to restart the installation on the spot
+- Data is now stored using SQLite instead of LiteDB
+- For languages that have a main scan module (Java, JavaScript/TypeScript, PHP and Python), the PM Taint core is no longer used
+- Optimized the scanning process
+- ALT Linux OS is now supported in the test mode
+
 ## [2.0.1]
 
 - PT AI 4.5.0 API support added
