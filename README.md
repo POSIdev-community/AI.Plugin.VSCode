@@ -10,7 +10,7 @@ You can enable or disable the plugin in the open project folder. If it is not th
 
 When the plugin is enabled, the **.ai** folder is created in the project. This folder contains a database, log files, and a configuration file.
 
-![The .ai folder](/media/readme/AI-enable-plugin.gif)
+![The .ai folder](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.2.0/media/readme/AI-enable-plugin.gif?raw=true)
 
 ### Installing the code analyzer
 
@@ -21,7 +21,7 @@ The path for code analyzer installation:
 * In Linux: `~/application-inspector-analyzer`
 * In macOS:` /Library/Application-Inspector-Analyzer`
 
-![Installing the code analyzer](/media/readme/AI-downoload-analyzer.gif)
+![Installing the code analyzer](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.2.0/media/readme/AI-downoload-analyzer.gif?raw=true)
 
 ### Scanning a project
 
@@ -37,7 +37,7 @@ You can monitor the scan progress on the **OUTPUT** tab. The first scan usually 
 
 General scan settings are configured in the `aiproj.json` configuration file. By running the command `PT Application Inspector: Create project settings file`, you can create a configuration file and configure scan settings in it.
 
-![Starting a scan](/media/readme/AI-start-scan.gif)
+![Starting a scan](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.2.0/media/readme/AI-start-scan.gif?raw=true)
 
 ### Stopping a scan
 
@@ -58,7 +58,7 @@ The data-flow diagram consists of the following sections:
 
 You can go to the corresponding place in the code editor from any section of the data-flow diagram.
 
-![The PT AI Data flow section](/media/readme/AI-data-flow.gif)
+![The PT AI Data flow section](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.2.0/media/readme/AI-data-flow.gif?raw=true)
 
 The **[PT AI] EXPLOIT** section contains an automatically generated HTTP request (exploit) that you can edit and use to check the vulnerability in a deployed web application.
 
@@ -66,7 +66,7 @@ The **[PT AI] EXPLOIT** section contains an automatically generated HTTP request
 
 ***Note.** To send an HTTP request, a third-party extension is required. It is recommended that you use the REST client.*
 
-![Vulnerability exploitation](/media/readme/AI-exploit.gif)
+![Vulnerability exploitation](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.2.0/media/readme/AI-exploit.gif?raw=true)
 
 Some vulnerabilities have additional exploitation conditions. They are displayed under **[PT AI] ADDITIONAL CONDITIONS**.
 
@@ -74,13 +74,13 @@ The contents of the **[PT AI]** sections depend on the code line selected in the
 
 When you scroll through the sections of the diagram, the vulnerability information is automatically pinned until you move on to another vulnerability. If you want to view information about a certain vulnerability while working on the code, you can pin this vulnerability manually.
 
-![Pinning a vulnerability](/media/readme/AI-pin-unpin.gif)
+![Pinning a vulnerability](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.2.0/media/readme/AI-pin-unpin.gif?raw=true)
 
 Several vulnerabilities can have the same exit point. If these vulnerabilities belong to the same type, they are grouped together and displayed as one problem with different exploitation options. In **[PT AI]** sections, use the left and right arrows to view detailed information about such vulnerabilities.
 
 ***Note**. If you confirm one vulnerability from the group, the whole problem will be confirmed automatically. To discard an entire problem, you must discard all the vulnerabilities in the group.*
 
-![Group of vulnerabilities](/media/readme/AI-group.gif)
+![Group of vulnerabilities](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.2.0/media/readme/AI-group.gif?raw=true)
 
 ### Managing detected vulnerabilities
 
@@ -89,11 +89,11 @@ The PT Application Inspector plugin contains a set of tools for managing detecte
 * Filter vulnerabilities by severity, status, and exclusion from scan results by running the command `PT Application Inspector: Show vulnerabilities`.
 * Confirm and discard vulnerabilities by clicking the X and checkmark buttons in **[PT AI]** sections
 
-![Excluding a vulnerability from scan results](/media/readme/AI-actions.gif)
+![Excluding a vulnerability from scan results](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.2.0/media/readme/AI-actions.gif?raw=true)
 
-![Filtering vulnerabilities by severity](/media/readme/AI-show.gif)
+![Filtering vulnerabilities by severity](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.2.0/media/readme/AI-show.gif?raw=true)
 
-![Confirming and discarding vulnerabilities](/media/readme/AI-confirm-discard.gif)
+![Confirming and discarding vulnerabilities](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.2.0/media/readme/AI-confirm-discard.gif?raw=true)
 
 ### Comparing scan results
 
@@ -101,7 +101,7 @@ You can compare results of two scans within a project. To do this, under **[PT A
 
 ***Note**. The **[PT AI] SCAN HISTORY** section is displayed only in the developer mode.*
 
-![Comparing scan results](/media/readme/AI-compare.gif)
+![Comparing scan results](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.2.0/media/readme/AI-compare.gif?raw=true)
 
 ## Integration with PT AI Enterprise Edition
 
@@ -111,7 +111,7 @@ To configure the integration:
 
 1. Enter the PT AI Enterprise Server URL and sign in to PT AI Enterprise Edition via your SSO system.
 
-    ![Connecting to PT AI Enterprise Server](/media/readme/AI-connect-to-server.gif)
+    ![Connecting to PT AI Enterprise Server](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.2.0/media/readme/AI-connect-to-server.gif?raw=true)
 1. Synchronize a local project in Visual Studio Code and a project in PT AI Enterprise Server in one of the following ways:
 
    * Upload a local project to PT AI Enterprise Server
@@ -120,7 +120,7 @@ To configure the integration:
 
    * Download a project from PT AI Enterprise Server to a local file system
 
-   ![Synchronizing projects](/media/readme/AI-map-project.gif)
+   ![Synchronizing projects](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.2.0/media/readme/AI-map-project.gif?raw=true)
 1. Work with code, scan, confirm, and discard vulnerabilities as you normally do.
 
 The statuses of detected vulnerabilities are synchronized automatically, and all the team members can assess the current threat level.
