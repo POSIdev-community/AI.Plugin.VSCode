@@ -1,3 +1,10 @@
+## [2.2.1]
+
+- For static analysis of JavaScript and TypeScript applications, you can now use separate scan modules: Taint and JSA. You can manually select one of them or both by aiproj file.
+- Fixed the Java project scanning errors.
+- Fixed the error that occurred when scanning with the module that searches for vulnerable components in an isolated network.
+- PT AI 4.7.1 API support added.
+
 ## [2.2.0]
 
 - In version 2.2.0, you can scan applications written in several languages. When creating a project, PT Application Inspector plugin analyzes extensions of project files with source code and automatically identifies their languages. If necessary, you can change languages manually.
