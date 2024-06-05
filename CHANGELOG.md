@@ -1,3 +1,7 @@
+## [2.2.2]
+
+- Fixed links in README.
+
 ## [2.2.1]
 
 - For static analysis of JavaScript and TypeScript applications, you can now use separate scan modules: Taint and JSA. You can manually select one of them or both by aiproj file.
