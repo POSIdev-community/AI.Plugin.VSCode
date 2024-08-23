@@ -1,3 +1,9 @@
+## [2.2.3]
+
+To make the plugin easier to use, we added the PT APPLICATION INSPECTOR tab to the Activity Bar. This tab contains the following:
+-    The new CODE SCANNING section with the list of detected vulnerabilities, scan start and stop buttons (moved from the the status bar in the lower part of the window), and the filter button to filter vulnerabilities by severity, status, and suppression from scan results (duplicates the PT Application Inspector: Show Vulnerabilities command).
+-    The DATA FLOW, ADDITIONAL CONDITIONS, SCAN HISTORY, and EXPLOIT sections moved from the EXPLORER panel.
+
 ## [2.2.2]
 
 - Fixed links in README.
