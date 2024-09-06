@@ -1,3 +1,7 @@
+## [2.2.4]
+
+- Minor bugfix
+
 ## [2.2.3]
 
 To make the plugin easier to use, we added the PT APPLICATION INSPECTOR tab to the Activity Bar. This tab contains the following:
