@@ -1,3 +1,8 @@
+## [2.3.0]
+
+- PT AI 4.8.0 API support added.
+- Minor bugfix
+
 ## [2.2.4]
 
 - Minor bugfix
