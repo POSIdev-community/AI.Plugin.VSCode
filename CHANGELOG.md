@@ -1,3 +1,10 @@
+## [2.3.1]
+
+The following changes have been made in version 2.3.1:
+
+- Added the Solidity programming language. You can enable code analysis for this language in the .aiproj.json file.
+- Added the option to specify the path to downloaded dependencies used when analyzing code in Java and Python projects. The path parameter for downloading dependencies DependenciesPath must be specified in the .aiproj.json file in the PythonSettings or JavaSettings section.
+
 ## [2.3.0]
 
 - PT AI 4.8.0 API support added.

@@ -1,6 +1,6 @@
 ## Overview
 
-The PT Application Inspector plugin finds vulnerabilities and undocumented features in application source code. In addition to code analysis, built-in modules detect errors in configuration files and vulnerabilities in third-party components and libraries used in application development. The plugin supports the following languages: C#, Go, Java, JavaScript, Kotlin, PHP, Python, Ruby, SQL, and TypeScript.
+The PT Application Inspector plugin finds vulnerabilities and undocumented features in application source code. In addition to code analysis, built-in modules detect errors in configuration files and vulnerabilities in third-party components and libraries used in application development. The plugin supports the following languages: C#, Go, Java, JavaScript, Kotlin, PHP, Python, Ruby, SQL, Solidity, and TypeScript.
 
 ## How it works
 
@@ -20,11 +20,11 @@ To manually install the code analyzer:
 
 1. Download the archive with the analyzer using one of the links:
 
-   * For Windows: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.zip/2.3.0.40145/download/AI.INFRASTRUCTURE.INSTALLATOR.2.3.0.40145.zip)
+   * For Windows: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.zip/2.3.1.41874/download/AI.INFRASTRUCTURE.INSTALLATOR.2.3.1.41874.zip)
 
-   * For Linux: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.tar.gz/2.3.0.40145/download/AI.INFRASTRUCTURE.INSTALLATOR.2.3.0.40145.tar.gz)
+   * For Linux: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.tar.gz/2.3.1.41874/download/AI.INFRASTRUCTURE.INSTALLATOR.2.3.1.41874.tar.gz)
 
-   * For macOS: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.pkg/2.3.0.40145/download/AI.INFRASTRUCTURE.INSTALLATOR.2.3.0.40145.pkg)
+   * For macOS: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.pkg/2.3.1.41874/download/AI.INFRASTRUCTURE.INSTALLATOR.2.3.1.41874.pkg)
 
 2. In macOS, run the following command to remove the `com.apple.quarantine` attribute: 
 ```bash
@@ -32,7 +32,7 @@ xattr -d com.apple.quarantine <analyzer_file_path.pkg>
 ```
    Then run the installation file and follow the instructions.
 
-2. In Windows and Linux, unpack the archive to one of the following locations:
+3. In Windows and Linux, unpack the archive to one of the following locations:
 
    * In Windows: `%LOCALAPPDATA%\Application Inspector Analyzer`
 
@@ -48,7 +48,7 @@ You can start a project scan in the following ways:
 * By running the command `PT Application Inspector: Start Scan`
 * By running the command `PT Application Inspector: Start Full Scan`
 
-***Note**. Before scanning, all changes to the project are automatically saved.*
+***Note.** Before scanning, all changes to the project are automatically saved.*
 
 You can monitor the scan progress on the **OUTPUT** tab. The first scan usually takes longer due to the initial load on the database of vulnerable components.
 
@@ -64,9 +64,9 @@ You can stop a project scan by running the command `PT Application Inspector: St
 
 You can find the list of all detected vulnerabilities in the **PROBLEMS** tab and in the **CODE SCANNING** section. If you click a vulnerability in the list, the line with its exit point gets highlighted in the code editor.
 
-The **DATA FLOW** section contains a data-flow diagram that shows how each process converts its input data to output data and how processes interact.
+The **VULNERABILITY CODE** section may contain a data-flow diagram or a set of metavariables (only for the Solidity language and the Pygrep scan core).
 
-The data-flow diagram consists of the following sections:
+The data-flow diagram shows how each process converts its inputs into outputs and how the processes interact with each other. The diagram may consist of the following sections:
 * **Entry point**. The starting point of the control flow.
 * **Data entry point**. The file and code line with the coordinates of the data entry.
 * **Data changes**. The description of one or several functions that modify potentially harmful input data. This section may not be displayed on the diagram if the input data were not modified.
@@ -74,6 +74,8 @@ The data-flow diagram consists of the following sections:
 * **Best place to fix**. The code line best suited for patching a vulnerability. This section is displayed before the data flow.
 
 You can go to the corresponding place in the code editor from any section of the data-flow diagram.
+
+When scanning a project, the Pygrep kernel uses rules from the PT AI Enterprise Edition knowledge base or custom rules, the path to which is specified in the Solidity language settings. Each rule contains templates describing metavariables and regular expressions for finding these metavariables. A vulnerability is considered to be found if lines of code are found in which a regular expression corresponding to a metavariable gets a match.
 
 ![The [PT AI] Data flow section](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.3.0/media/readme/AI-data-flow.gif?raw=true)
 
@@ -95,7 +97,7 @@ When you scroll through the sections of the diagram, the vulnerability informati
 
 Several vulnerabilities can have the same exit point. If these vulnerabilities belong to the same type, they are grouped together and displayed as one problem with different exploitation options. In **PT APPLICATION INSPECTOR** sections, use the left and right arrows to view detailed information about such vulnerabilities.
 
-***Note**. If you confirm one vulnerability from the group, the whole problem will be confirmed automatically. To discard an entire problem, you must discard all the vulnerabilities in the group.*
+***Note.** If you confirm one vulnerability from the group, the whole problem will be confirmed automatically. To discard an entire problem, you must discard all the vulnerabilities in the group.*
 
 ![Group of vulnerabilities](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.3.0/media/readme/AI-group.gif?raw=true)
 
@@ -117,6 +119,7 @@ The PT Application Inspector plugin contains a set of tools for managing detecte
 ![Confirming and discarding vulnerabilities](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.3.0/media/readme/AI-confirm-discard.gif?raw=true)
 
 ### Comparing scan results
+
 You can compare results of two scans within a project. To do this, under **SCAN HISTORY**, select the scans you need and then select **Compare scan results** in the context menu.
 
 ![Comparing scan results](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.3.0/media/readme/AI-compare.gif?raw=true)
@@ -147,6 +150,8 @@ For more information about the integration, see the PT AI Enterprise Edition Us
 
 ## Plugin commands and settings
 
+
+
 ### Plugin commands
 
 To start working with the plugin, you can enter the following commands into the command palette:
@@ -172,14 +177,14 @@ To start working with the plugin, you can enter the following commands into the 
 You can configure the plugin settings by going to the action panel and clicking **Extensions** → **PT Application Inspector** → the gear icon → **Extension Settings**.
 
 The plugin configuration page contains the following settings:
-* **Allow telemetry collection**. Collection of general scan information to be sent to PT AI Enterprise Edition. By default, the setting is enabled.
-* **Analyzer log level**. The severity level starting from which the code analyzer events will be logged. The default value is "Error."
+* **Allow telemetry collection**. Collection of general scan information to be sent to PT AI Enterprise Edition. By default, this setting is enabled.
+* **Analyzer log level**. The severity level starting from which the code analyzer events will be logged. The default value is Error.
 * **Automatically enable for any project**. Silent activation of the plugin when opening a project. By default, this setting is disabled.
 * **Developer mode**. Advanced plugin features. By default, this setting is disabled.
 * **Maximum number of stored log files**. The default value is "100."
 * **Number of days to store log files**. The default value is "30."
 * **Number of scan results**. Maximum number of scan results saved in the scan result history. The default value is "10." If the limit is exceeded, each new scan result deletes the oldest result.
-* **Trigger scan**. The start scan condition: manually on clicking a start button or automatically when a project file is changed. The default value is "Manually."
+* **Trigger scan**. Start scan condition: manually on clicking a start button or automatically when a project file is changed. The default value is Manually.
 * **Use all available resources for scanning**. The use of all available RAM and CPU resources to increase scanning speed. By default, this setting is disabled.
 * **AI server URL**. The address of the connected PT AI Enterprise Server.
 * **Username**. The name of an authorized user.
