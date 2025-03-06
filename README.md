@@ -20,11 +20,11 @@ To manually install the code analyzer:
 
 1. Download the archive with the analyzer using one of the links:
 
-    * For Windows: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.zip/2.4.0.43980/download/AI.INFRASTRUCTURE.INSTALLATOR.2.4.0.43980.zip)
+   * For Windows: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.zip/2.4.0.43980/download/AI.INFRASTRUCTURE.INSTALLATOR.2.4.0.43980.zip)
 
-    * For Linux: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.tar.gz/2.4.0.43980/download/AI.INFRASTRUCTURE.INSTALLATOR.2.4.0.43980.tar.gz)
+   * For Linux: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.tar.gz/2.4.0.43980/download/AI.INFRASTRUCTURE.INSTALLATOR.2.4.0.43980.tar.gz)
 
-    * For macOS: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.pkg/2.4.0.43980/download/AI.INFRASTRUCTURE.INSTALLATOR.2.4.0.43980.pkg)
+   * For macOS: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.pkg/2.4.0.43980/download/AI.INFRASTRUCTURE.INSTALLATOR.2.4.0.43980.pkg)
 
 2. In macOS, run the following command to remove the `com.apple.quarantine` attribute:
 
@@ -145,7 +145,11 @@ To configure the integration:
 
    * Upload the source code to PT AI Enterprise Server.
 
+   ![Upload the source code](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.4.2/media/readme/AI-create-project.gif?raw=true)
+
    * Send a local project for scanning to PT AI Enterprise Server with or without saving the results on the server.
+
+   ![Remote scan](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.4.2/media/readme/AI-remote-scan.gif?raw=true)
 
    * Synchronize the results of the local scan and the scan in PT AI Enterprise Server.
 
@@ -177,6 +181,7 @@ To start working with the plugin, you can enter the following commands into the 
 * `PT Application Inspector: Disconnect from PT AI Server`. Disconnect from PT AI Enterprise Server (command for integration).
 * `PT Application Inspector: PT AI Server Authentication`. Enter the authentication token (command for integration).
 * `PT Application Inspector: Manage Projects`. Display the list of projects from PT AI Enterprise Server (command for integration). With this command, you can select a project in PT AI Enterprise Server and connect your local project to it in Visual Studio Code.
+* `PT Application Inspector: Create PT AI Server Project`. Upload a local project from IDE to PT AI Enterprise Server (command for integration).
 * `PT Application Inspector: Pull Scan Results from PT AI Server`. Fetch scan results from PT AI Enterprise Server (command for integration).
 * `PT Application Inspector: Push Scan Results to PT AI Server`. Send scan results to PT AI Enterprise Server (command for integration).
 * `PT Application Inspector: Push source code to PT AI Server`. Upload the source code of a local project to PT AI Enterprise Server (command for integration).
