@@ -1,3 +1,11 @@
+## [2.4.2]
+
+ - Plugin now allow you to select the SCA analysis module when creating a project on server PT AI.
+ - Vulnerable components and vulnerabilities in components detected by the module and pulled from server PT AI are displayed in the list of vulnerabilities.
+ - Fixed an error in the JSA.Go core that occurred when scanning Go projects.
+ - Fixed an issue that caused the JSA.JVM core to incorrectly complete scanning of files containing a hyphen in the name.
+ - PT AI 4.10.0 API support.
+
 ## [2.4.0]
 
 New ways to integrate with PT AI Enterprise Edition have been added. Now you can do the following: 
