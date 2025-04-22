@@ -1,6 +1,18 @@
+## [2.5.0]
+
+- To help users sort through a large number of vulnerabilities detected during project scanning, the assistant function has been added to the plugin for Visual Studio Code. You can start the assistant from the pop-up notification that appears when the scan is completed or by clicking the special button and choose to go through the whole scenario or only certain steps.
+- Java 21 support
+- JSA.Net core now supports scanning projects in C# version 11.
+- JSA.JavaScript core now supports the React framework.
+- AI.PHP core, previously used to scan PHP projects, has been replaced with JSA.PHP.
+- Fixed the Connection reset by peer error that occurred when scanning Go projects.
+- Fixed a Java project scanning error that occurred when specifying JVM startup parameters.
+- Fixed an issue with dependency loading when scanning Java projects.
+- PT AI 4.11.0 API support.
+
 ## [2.4.2]
 
- - Plugin now allow you to select the SCA analysis module when creating a project on server PT AI.
+ - Plugin now allows you to select the SCA analysis module when creating a project on server PT AI.
  - Vulnerable components and vulnerabilities in components detected by the module and pulled from server PT AI are displayed in the list of vulnerabilities.
  - Fixed an error in the JSA.Go core that occurred when scanning Go projects.
  - Fixed an issue that caused the JSA.JVM core to incorrectly complete scanning of files containing a hyphen in the name.
@@ -13,7 +25,6 @@ New ways to integrate with PT AI Enterprise Edition have been added. Now you can
  - Run a local project scan in PT AI Enterprise Server with or without saving the results on the server.
  - Send the source code of a project to PT AI Enterprise Server without running a scan
  - Synchronize scan results between the plugin and the PT AI server 
-
  - PT AI 4.9.1 API support.
 
 ## [2.3.1]
@@ -22,7 +33,6 @@ The following changes have been made in version 2.3.1:
 
 - Added the Solidity programming language. You can enable code analysis for this language in the .aiproj.json file.
 - Added the option to specify the path to downloaded dependencies used when analyzing code in Java and Python projects. The path parameter for downloading dependencies DependenciesPath must be specified in the .aiproj.json file in the PythonSettings or JavaSettings section.
-
 - PT AI 4.8.1 API support.
 
 ## [2.3.0]
