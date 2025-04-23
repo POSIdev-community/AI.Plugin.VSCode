@@ -120,6 +120,16 @@ The PT Application Inspector plugin contains a set of tools for managing detecte
 
 ![Confirming and discarding vulnerabilities](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.5.0/media/readme/AI-confirm-discard.gif?raw=true)
 
+### Using the assistant
+
+If a large number of vulnerabilities is detected during project scanning, you can sort them out much faster using the assistant function. The assistant gives recommendations in the following order:
+* Confirm vulnerabilities that have an exploit
+* Discard vulnerabilities with a detected filtering function
+* Confirm or discard a group of vulnerabilities similar in type or vulnerable code
+* Review vulnerability statuses assigned manually by the user (with the option to comment)
+
+You can start the assistant from the pop-up notification that appears when the scan is completed or by clicking the ![pic](https://github.com/POSIdev-community/AI.Plugin.VSCode/raw/release/2.5.0/media/readme/run-assistant.png) button and choose to go through the whole scenario or only certain steps.
+
 ### Comparing scan results
 
 You can compare results of two scans within a project. To do this, under **SCAN HISTORY**, select the scans you need and then select **Compare scan results** in the context menu.
@@ -185,6 +195,8 @@ To start working with the plugin, you can enter the following commands into the 
 * `PT Application Inspector: Pull Scan Results from PT AI Server`. Fetch scan results from PT AI Enterprise Server (command for integration).
 * `PT Application Inspector: Push Scan Results to PT AI Server`. Send scan results to PT AI Enterprise Server (command for integration).
 * `PT Application Inspector: Push source code to PT AI Server`. Upload the source code of a local project to PT AI Enterprise Server (command for integration).
+* `PT Application Inspector: Run Assistant`. Run the assistant.
+* `PT Application Inspector: Stop Assistant`. Stop the assistant.
 
 ### Plugin settings
 
@@ -203,6 +215,12 @@ The plugin configuration page contains the following settings:
 * **AI server URL**. The address of the connected PT AI Enterprise Server.
 * **Username**. The name of an authorized user.
 * **Actions with new scan results on the PT AI server**. The behavior of the plugin when receiving new scan results from PT AI Enterprise Server if synchronization with the project is configured. The default value is **Notify about new scan results**.
+
+In a separate section, you can configure the assistant settings:
+* **Run the assistant**. Activation of the assistant automatically after the first scan or manually by clicking the special button. The default value is "Automatically after the first scan."
+* **Show recommendations on the Quick Fix menu**. Displays tips from the assistant. By default, this setting is enabled. 
+* The number of vulnerabilities to be confirmed or discarded starting from which a notification from the assistant will be displayed. The default value is 15.
+* The number of similar vulnerabilities starting from which a notification from the assistant will be displayed. The default value is 15.
 
 ## Requirements
 

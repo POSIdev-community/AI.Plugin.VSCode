@@ -1,7 +1,9 @@
 ## [2.5.0]
 
-- To help users sort through a large number of vulnerabilities detected during project scanning, the assistant function has been added to the plugin for Visual Studio Code. You can start the assistant from the pop-up notification that appears when the scan is completed or by clicking the special button and choose to go through the whole scenario or only certain steps.
-- Java 21 support
+- To help users sort out a large number of vulnerabilities detected during project scanning, the Assistant function has been added to the plugin. Assistant helps with the following:
+    - Suggests vulnerabilities to be confirmed or discarded.
+    - Groups similar vulnerabilities and offers to confirm or discard the entire group.
+- Java 21 support.
 - JSA.Net core now supports scanning projects in C# version 11.
 - JSA.JavaScript core now supports the React framework.
 - AI.PHP core, previously used to scan PHP projects, has been replaced with JSA.PHP.
