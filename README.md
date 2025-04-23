@@ -128,7 +128,11 @@ If a large number of vulnerabilities is detected during project scanning, you ca
 * Confirm or discard a group of vulnerabilities similar in type or vulnerable code
 * Review vulnerability statuses assigned manually by the user (with the option to comment)
 
+![Assistant overview](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.5.0/media/readme/AI-assistant-overview.gif?raw=true)
+
 You can start the assistant from the pop-up notification that appears when the scan is completed or by clicking the ![pic](https://github.com/POSIdev-community/AI.Plugin.VSCode/raw/release/2.5.0/media/readme/run-assistant.png) button and choose to go through the whole scenario or only certain steps.
+
+![Assistant actions](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/2.5.0/media/readme/AI-assistant-action.gif?raw=true)
 
 ### Comparing scan results
 
