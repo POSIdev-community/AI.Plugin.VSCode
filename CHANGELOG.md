@@ -1,3 +1,12 @@
+## [2.6.0]
+
+ - Added limited support for branch management: when synchronizing a local project and PT AI Enterprise Server project, the oldest branch is connected.
+ - Added support for scanning of projects written in C# version 12 and projects created in .NET version 8.
+ - Added support for scanning of .Net projects in macOS.
+ - Updated the JSA.JS scan core for macOS.
+ - Added the PT AI SERVER section where you can configure synchronization between a local project and PT AI Enterprise Server project.
+ - PT AI 5.0.0 API support.
+
 ## [2.5.0]
 
 - To help users sort out a large number of vulnerabilities detected during project scanning, the Assistant function has been added to the plugin. Assistant helps with the following:
