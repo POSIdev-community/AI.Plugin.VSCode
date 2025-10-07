@@ -1,3 +1,9 @@
+## [2.7.0]
+
+- Added support for scanning of Scala and Swift projects.
+- Added support for scanning of C/C++ and Objective-C projects in Windows and Linux.
+- PT AI 5.2.0 API support.
+
 ## [2.6.0]
 
  - Added limited support for branch management: when synchronizing a local project and PT AI Enterprise Server project, the oldest branch is connected.
