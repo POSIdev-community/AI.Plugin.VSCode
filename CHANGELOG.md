@@ -2,7 +2,7 @@
 
 - Added support for scanning of Scala and Swift projects.
 - Added support for scanning of C/C++ and Objective-C projects in Windows and Linux.
-- New .aiproj schema. Support setting DslRulesRelativePath for languages: Python, Java, PHP, JS, GO.
+- New .aiproj schema. The DslRulesRelativePath setting is supported for the following languages: Python, Java, PHP, JS, and GO.
 - PT AI 5.2.0 API support.
 
 ## [2.6.0]
@@ -78,6 +78,7 @@ To make the plugin easier to use, we added the PT APPLICATION INSPECTOR tab to t
 - Fixed the Java project scanning errors.
 - Fixed the error that occurred when scanning with the module that searches for vulnerable components in an isolated network.
 - PT AI 4.7.1 API support added.
+
 
 ## [2.2.0]
 
