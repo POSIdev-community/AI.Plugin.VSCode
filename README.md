@@ -22,11 +22,11 @@ To manually install the code analyzer:
 
 1. Download the archive with the analyzer using one of the links:
 
-   * For Windows: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.zip/2.6.0.51814/download/AI.INFRASTRUCTURE.INSTALLATOR.2.6.0.51814.zip)
+   * For Windows: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.zip/2.7.0.567/download/AI.INFRASTRUCTURE.INSTALLATOR.2.7.0.567.zip)
 
-   * For Linux: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.tar.gz/2.6.0.51814/download/AI.INFRASTRUCTURE.INSTALLATOR.2.6.0.51814.tar.gz)
+   * For Linux: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.tar.gz/2.7.0.567/download/AI.INFRASTRUCTURE.INSTALLATOR.2.7.0.567.tar.gz)
 
-   * For macOS: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.pkg/2.6.0.51814/download/AI.INFRASTRUCTURE.INSTALLATOR.2.6.0.51814.pkg)
+   * For macOS: [download](https://update.ptsecurity.com/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.pkg/2.7.0.567/download/AI.INFRASTRUCTURE.INSTALLATOR.2.7.0.567.pkg)
 
 2. In macOS, run the following command to remove the `com.apple.quarantine` attribute:
 
@@ -75,7 +75,6 @@ The data-flow diagram shows how each process converts its inputs into outputs an
 * **Data entry point**. The file and code line with the coordinates of the data entry.
 * **Data changes**. The description of one or several functions that modify potentially harmful input data. This section may not be displayed on the diagram if the input data were not modified.
 * **Exit point**. The execution line of a potentially vulnerable function. This is the exit point related to the vulnerability in the source code.
-* **Best place to fix**. The code line best suited for patching a vulnerability. This section is displayed before the data flow.
 
 You can go to the corresponding place in the code editor from any section of the data-flow diagram.
 
