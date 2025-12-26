@@ -1,3 +1,9 @@
+## [2.8.0]
+
+- Allow you to manage the statuses of several vulnerabilities by selecting them in the CODE SCANNING section and changing the status using the corresponding button.
+- Fixed some PT AI Enterprise Server integration issues.
+- PT AI 5.3.0 API support.
+
 ## [2.7.0]
 
 - Added support for scanning of Scala and Swift projects.
@@ -38,11 +44,11 @@
 
 ## [2.4.0]
 
-New ways to integrate with PT AI Enterprise Edition have been added. Now you can do the following: 
+New ways to integrate with PT AI Enterprise Edition have been added. Now you can do the following:
 
  - Run a local project scan in PT AI Enterprise Server with or without saving the results on the server.
  - Send the source code of a project to PT AI Enterprise Server without running a scan
- - Synchronize scan results between the plugin and the PT AI server 
+ - Synchronize scan results between the plugin and the PT AI server
  - PT AI 4.9.1 API support.
 
 ## [2.3.1]
