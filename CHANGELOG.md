@@ -1,3 +1,12 @@
+## [2.9.0]
+
+- Added full support for branches. When you synchronize a local project in the IDE and a project in PT AI Enterprise Server, you can now select a branch (previously, the oldest branch was automatically used). You can also push the source code and scan results to a selected branch, and you can specify a branch when loading code from PT AI Enterprise Server.
+- Added support for PT AI Enterprise Edition API version 6.0.0, including the displaying of vulnerabilities found by the Hardcoded secrets module and 1C-specific vulnerabilities. These vulnerabilities become available after you load the scan results from PT AI Enterprise Server.
+- Added an anonymous telemetry collection system that allows our specialists to analyze usage scenarios, find and fix bugs across different IDE versions, and improve the plugin's stability and performance. Only technical metrics for the plugin and IDE are collected. Source code, credentials, tokens, and project contents are completely excluded.
+- Discontinued support of analyzer builds for macOS on Intel architecture. Only the ARM64 version is now available.
+- When you navigate the CODE SCANNING tree using the ↑ or ↓ key and select a line containing a vulnerability, the code editor now opens a file on the right, which contains the vulnerability; the corresponding vulnerable code fragment is highlighted.
+- Fixed some PT AI Enterprise Server integration issues.
+
 ## [2.8.0]
 
 - Allow you to manage the statuses of several vulnerabilities by selecting them in the CODE SCANNING section and changing the status using the corresponding button.
