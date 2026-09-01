@@ -1,3 +1,7 @@
+## [2.10.1]
+
+- Fixed an issue where the welcome view was not appearing in Cursor and other VSCode-based IDEs.
+
 ## [2.10.0]
 
 - Added support for PT AI Enterprise Edition API version 6.1.0: the plugin now displays vulnerabilities detected in Dart projects. These vulnerabilities become available after you load the scan results from PT AI Enterprise Server.
