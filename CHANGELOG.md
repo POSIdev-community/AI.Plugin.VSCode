@@ -1,6 +1,14 @@
+## [3.0.0]
+
+- Added an AI-driven Assistant feature to generate recommendations for fixing detected vulnerabilities. The recommendations are generated using OpenAI-compatible models, as well as models available through private proxies or deployed locally. The feature is available in the new **How to fix** tab and integrated into the Quick Fix mechanism.
+- Added Model Context Protocol (MCP) integration. The plugin now supports integration with external AI agents (like Cursor, Claude Desktop, Codex, etc.). AI agents can autonomously trigger scans, fetch scan statuses, list and detail vulnerabilities, and triage issues. All actions performed by the AI agent are instantly reflected in the plugin's UI. 
+- Added GenAI Code Gates (Security Hooks) for AI agents. This allows supported AI agents to automatically validate the code they generate by running a local scan before finalizing their answer. Includes the setup of per-turn baselines to optimize scans and mechanisms to prevent infinite loops.
+- Added support for displaying vulnerabilities detected by the Malicious code module. Similar to Dart and 1C, these vulnerabilities are displayed when you load scan results from PT AI Enterprise Server or run a remote scan. You can also create projects in PT AI Enterprise Server with this module selected.
+- Added support for PT AI Enterprise Edition API version 6.3.0, ensuring full compatibility with the latest server features.
+
 ## [2.10.1]
 
-- Fixed an issue where the welcome view was not appearing in Cursor and other VSCode-based IDEs.
+- Fixed the issue with the welcome view not appearing in Cursor and other VSCode-based IDEs.
 
 ## [2.10.0]
 
