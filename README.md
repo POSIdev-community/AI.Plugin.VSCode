@@ -2,9 +2,11 @@
 
 The PT Application Inspector plugin finds vulnerabilities and undocumented features in application source code. In addition to code analysis, built-in modules detect errors in configuration files and vulnerabilities in third-party components and libraries used in application development. The plugin supports the following languages: C#, Go, Java, JavaScript, Kotlin, PHP, Python, Ruby, Scala, SQL, Solidity, TypeScript, C/C++, Objective-C, and Swift.
 
-The plugin also partially supports 1C and Dart. You cannot start scans for 1C or Dart projects with the plugin, but you can use the plugin to create PT AI Enterprise Server projects in these languages or load scan results for 1C or Dart projects from PT AI Enterprise Server (the plugin will then display vulnerabilities detected in these projects). The "Hardcoded secrets", "Vulnerable components and their use", and "Malicious code" modules are also partially supported. You can use the plugin to create PT AI Enterprise Server projects with these modules, or to load scan results for projects with these modules from PT AI Enterprise Server (the plugin will then display vulnerabilities detected by these modules).
+The plugin also partially supports 1C and Dart. You cannot start scans for 1C or Dart projects with the plugin, but you can use the plugin to create PT AI Enterprise Server projects in these languages or load scan results for 1C or Dart projects from PT AI Enterprise Server (the plugin will then display vulnerabilities detected in these projects).
 
-***Note.** The scanning of projects in C/C++, Objective-C, and Swift is not supported in macOS.*
+The "Hardcoded secrets", "Vulnerable components and their use", and "Malicious code detection" modules are also partially supported. You can use the plugin to create PT AI Enterprise Server projects with these modules, or to load scan results from PT AI Enterprise Server (the plugin will then display vulnerabilities detected by these modules).
+
+***Note.** The scanning of projects in C/C++, Objective-C, and Swift is not supported on macOS.*
 
 ## How it works
 
@@ -24,13 +26,13 @@ To manually install the code analyzer:
 
 1. Download the archive with the analyzer using one of the links:
 
-   * For Windows: [download](https://update.ptsecurity.ru/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.zip/3.0.0.1479/download/AI.INFRASTRUCTURE.INSTALLATOR.3.0.0.1479.zip)
+   * For Windows: [download](https://update.ptsecurity.ru/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.zip/3.0.0.1494/download/AI.INFRASTRUCTURE.INSTALLATOR.3.0.0.1494.zip)
 
-   * For Linux: [download](https://update.ptsecurity.ru/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.tar.gz/3.0.0.1479/download/AI.INFRASTRUCTURE.INSTALLATOR.3.0.0.1479.tar.gz)
+   * For Linux: [download](https://update.ptsecurity.ru/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.tar.gz/3.0.0.1494/download/AI.INFRASTRUCTURE.INSTALLATOR.3.0.0.1494.tar.gz)
 
-   * For macOS: [download](https://update.ptsecurity.ru/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.pkg/3.0.0.1479/download/AI.INFRASTRUCTURE.INSTALLATOR.3.0.0.1479.pkg)
+   * For macOS: [download](https://update.ptsecurity.ru/api/v6/products/AI.INFRASTRUCTURE.INSTALLATOR.pkg/3.0.0.1494/download/AI.INFRASTRUCTURE.INSTALLATOR.3.0.0.1494.pkg)
 
-2. In macOS, run the following command to remove the `com.apple.quarantine` attribute:
+2. On macOS, run the following command to remove the `com.apple.quarantine` attribute:
 
 ```bash
    xattr -d com.apple.quarantine <analyzer_file_path.pkg>
@@ -38,20 +40,20 @@ To manually install the code analyzer:
 
    Then run the installation file and follow the instructions.
 
-3. The analyzer must be installed or unpacked to the following locations:
+3. Extract the analyzer archive to one of the following locations:
 
-   * In Windows: `%LOCALAPPDATA%\Application Inspector Analyzer`
+   * On Windows: `%LOCALAPPDATA%\Application Inspector Analyzer`
 
-   * In Linux: `~/application-inspector-analyzer`
+   * On Linux: `~/application-inspector-analyzer`
 
-   * In macOS: `/Library/Application-Inspector-Analyzer`
+   * On macOS: `/Library/Application-Inspector-Analyzer`
 
 ![Installing the code analyzer](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/3.0.0/media/readme/AI-downoload-analyzer.gif?raw=true)
 
 ### Scanning a project
 
 You can start a project scan in the following ways:
-* By clicking the ![pic](https://github.com/POSIdev-community/AI.Plugin.VSCode/raw/release/3.0.0/media/readme/start-scan.png) or ![pic](https://github.com/POSIdev-community/AI.Plugin.VSCode/raw/release/3.0.0/media/readme/start-full-scan.png) in the **CODE SCANNING** section.
+* By clicking the ![pic](https://github.com/POSIdev-community/AI.Plugin.VSCode/raw/release/3.0.0/media/readme/start-scan.png) or ![pic](https://github.com/POSIdev-community/AI.Plugin.VSCode/raw/release/3.0.0/media/readme/start-full-scan.png) button in the **CODE SCANNING** section.
 * By saving project changes (if you selected **On saving** for the **Trigger scan** setting).
 * By running the command `PT Application Inspector: Scan Locally`.
 * By running the command `PT Application Inspector: Start Full Local Scan`.
@@ -82,7 +84,7 @@ The data-flow diagram shows how each process converts its inputs into outputs an
 
 You can go to the corresponding place in the code editor from any section of the data-flow diagram.
 
-When scanning a project, the Pygrep kernel uses rules from the PT AI Enterprise Edition knowledge base or custom rules, the path to which is specified in the Solidity language settings. Each rule contains templates describing metavariables and regular expressions for finding these metavariables. A vulnerability is considered to be found if lines of code are found in which a regular expression corresponding to a metavariable gets a match.
+When scanning a project, the Pygrep kernel uses rules from the PT AI Enterprise Edition knowledge base or custom rules, the path to which is specified in the Solidity language settings. Each rule contains templates describing metavariables and regular expressions for finding these metavariables. A vulnerability is considered to be found if lines of code are found in which a regular expression corresponding to a metavariable gets a match.
 
 ![The [PT AI] Data flow section](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/3.0.0/media/readme/AI-data-flow.gif?raw=true)
 
@@ -130,61 +132,61 @@ The PT Application Inspector plugin contains a set of tools for managing detecte
 
 ### Using the assistant
 
-If a large number of vulnerabilities is detected during project scanning, you can sort them out much faster using the assistant function. The assistant gives recommendations in the following order:
+If a large number of vulnerabilities is detected during project scanning, you can sort them out much faster using the assistant. The assistant gives recommendations in the following order:
 * Confirm vulnerabilities that have an exploit
 * Discard vulnerabilities with a detected filtering function
 * Confirm or discard a group of vulnerabilities similar in type or vulnerable code
-* Review vulnerability statuses assigned manually by the user
+* Review manually assigned vulnerability statuses
 
 ![Assistant overview](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/3.0.0/media/readme/AI-assistant-overview.gif?raw=true)
 
-You can start the assistant from the pop-up notification that appears when the scan is completed or by clicking the ![pic](https://github.com/POSIdev-community/AI.Plugin.VSCode/raw/release/3.0.0/media/readme/run-assistant.png) button. You can choose to go through the whole scenario or only certain steps.
+You can start the assistant from the pop-up notification that appears when the scan is completed or by clicking the ![pic](https://github.com/POSIdev-community/AI.Plugin.VSCode/raw/release/3.0.0/media/readme/run-assistant.png) button, and then choose to go through the whole scenario or only certain steps.
 
 ![Assistant actions](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/3.0.0/media/readme/AI-assistant-action.gif?raw=true)
 
-Also, the assistant provides recommendations for fixing detected vulnerabilities generated using artificial intelligence. OpenAI-compatible models, as well as models available through private proxies or deployed locally, are used to generate recommendations.
+The assistant shows AI-driven recommendations on how to fix detected vulnerabilities. Recommendations are generated using OpenAI-compatible models and models that are available through private proxies or deployed locally.
 
-Recommendations are displayed in the **How to fix** panel. The panel works in two modes: provider configuration and recommendation viewing. You need to configure the provider before first use.
+Recommendations are displayed in the **How to Fix** panel. You can use the panel in one of the two modes: to configure the provider or to view recommendations. Before the first use, you must configure the provider.
 
-To configure the provider:
+To set up a provider:
 
-1. On the plugin settings page, select the **Suggest fixes** check box and follow the link to the **How to fix** section.
+1. On the plugin settings page, select the **Suggest fixes** checkbox and click the link to go to the **How to Fix** section.
 
-   The **Suggest vulnerability fixes** check box will be selected automatically — it is synchronized with the **Suggest fixes** setting on the plugin settings page.
+   The **Suggest vulnerability fixes** checkbox is enabled automatically. It is synchronized with the **Suggest fixes** setting on the plugin settings page.
 
 2. Select a provider.
 
-3. Enter the API key. For the **Custom / Local** provider, additionally specify the endpoint URL.
+3. Enter your API key. For the **Custom / Local** provider, also specify the destination URL.
 
-4. Select a model from the recommended list (loaded from the server) or enter the name manually.
+4. Select a model from the recommended list (loaded from the server) or enter a name manually.
 
-5. Set the temperature — a value from 0 to 2 (from 0 to 1 for **YandexGPT**) that determines the variance of the model's response: the higher the value, the less predictable the result of the request execution.
+5. Set the temperature: a value from 0 to 2 (0–1 for **YandexGPT**), which defines the model response variability (the higher the value, the less predictable the query output).
 
-6. Set the maximum number of tokens output in one recommendation (the number of tokens in the same text may vary depending on the model).
+6. Set the maximum number of tokens in one recommendation (the number of tokens in the same text may vary between models).
 
-7. Click **Check connection** to ensure that the specified parameters are correct.
+7. Click **Check connection** to make sure the specified settings are correct.
 
-8. Save the parameters by clicking **Save**.
+8. Click the **Save** button to save the settings.
 
 ![Configuring the provider](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/3.0.0/media/readme/AI-assistant-configure-provider.gif?raw=true)
 
-To get a recommendation:
+How to get a recommendation:
 
 1. Select a vulnerability in the code editor.
 
-2. In the **Quick Fix** context menu, select **Suggest fix (PT AI)**.
+2. In the **Quick Fix** context menu, click **How to fix (assistant)**.
 
-3. Select the **How to fix** tab.
+3. Select the **How to Fix** tab.
 
-4. Click **Generate**.
+4. Click **Create**.
 
-The generated recommendation may contain a text description of the changes and code snippets with suggested fixes. You can:
-* Apply the suggested fix by clicking **Apply fix** — the code of the vulnerable file will be replaced with the suggested one.
-* Generate an alternative option by clicking **Suggest another option** — the previous recommendation will be replaced by a new one.
+The generated recommendation may contain a text description of the changes and code fragments with proposed fixes. Options include:
+* Click the **Apply Fix** button to apply the suggested fix. The code of the vulnerable file will be replaced with the suggested code.
+* To generate an alternative option, click the **Suggest New Option** button. The previous recommendation will be replaced by a new one.
 
 ![Getting a recommendation](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/3.0.0/media/readme/AI-assistant-get-recommendation.gif?raw=true)
 
-***Note.** Recommendations can be generated for all vulnerabilities except those suppressed from scan results and discarded.*
+***Note.** Recommendations can be generated for all vulnerabilities except those excluded from scan results, discarded, or belonging to the SCA, Weakness, or MaliciousCode class.*
 
 ### Comparing scan results
 
@@ -192,47 +194,63 @@ You can compare results of two scans within a project. To do this, under **SCAN 
 
 ![Comparing scan results](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/3.0.0/media/readme/AI-compare.gif?raw=true)
 
-## Integration with AI Agents (MCP)
+## Integration with AI agents
 
-The PT Application Inspector plugin supports integration with external AI assistants (such as Cursor, Claude Desktop, Windsurf, and others) via the Model Context Protocol (MCP). This integration turns the vulnerability analysis into a seamless "Find & Fix" flow where the AI agent can autonomously request scan results, study data-flow diagrams (DFD), and triage issues. 
-
-**Reactive UI:** Every action performed by the AI agent through the MCP (such as triggering a scan or changing a vulnerability status) is reactively and instantly reflected in the plugin's interface. You can watch the scan progress and see vulnerabilities update in real-time right in your IDE while chatting with the agent!
+The PT Application Inspector plugin supports integration with external AI agents (such as Cursor, Codex, Claude, etc.) via the Model Context Protocol (MCP). Integration allows agents installed on your computer to work directly with scan results: request a list of detected vulnerabilities, review vulnerability details (data-flow diagrams and additional exploitation conditions), confirm or discard vulnerabilities, or start scans. This saves you from having to manually copy vulnerability descriptions into the agent chat. You can ask the agent to find and fix vulnerabilities, and it will analyze the scan results and suggest code changes. All agent actions, such as starting a scan or changing a vulnerability status, are immediately reflected in the plugin interface. You see them directly in the IDE while communicating with the agent.
 
 ![Integration with AI Agents](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/3.0.0/media/readme/AI-mcp-integration.gif?raw=true)
 
-### Enabling the MCP integration
+### Connecting an AI agent
 
-To configure the integration and enable security hooks:
+To connect an AI agent:
 
-1. Run the `PT Application Inspector: Connect to AI Agent` command from the Command Palette.
-2. In the **Select agents for MCP** step, select the installed AI agents you want to integrate with.
-3. In the **Enable security hooks for** step, choose the agents for which you want to enable automatic security checks.
+1. In the command palette, run the `PT Application Inspector: Connect to AI Agent` command.
 
-The plugin will automatically configure the MCP server and hooks for the selected agents. For unsupported agents, you can select **Custom Agent** to generate a Markdown setup guide (`PT_AI_Custom_Agent_Setup.md`) with a manual configuration snippet and a system prompt.
+2. In the window that opens, select installed AI agents you want to connect to.
+
+   For unsupported agents, click the **Custom agent** checkbox to generate a markdown file named `PT_AI_Custom_Agent_Setup.md`, which contains setup instructions, a manual configuration snippet, and a system prompt.
+
+3. In the **Enable AI hooks for** window, select agents that you want to enable automatic security checks for.
+
+   The plugin will automatically configure the MCP server and AI hooks for the selected agents.
 
 ![Connect to AI Agents](https://github.com/POSIdev-community/AI.Plugin.VSCode/blob/release/3.0.0/media/readme/AI-mcp-connect.gif?raw=true)
 
-### Standalone MCP Installer (npm package)
+***Note.** If the plugin detects an installed AI agent when you launch Visual Studio Code, and the agent's configuration does not yet include an MCP server, a notification appears prompting you to configure it. The notification is shown once per IDE session. You can disable it permanently by clicking the **Don't Show Again** button.*
 
-In addition to the IDE plugin, we also provide a standalone MCP server via the `@posidev-community/ptai-mcp` npm package. This is useful if you want to use the PT AI MCP integration with terminal-based AI agents (like Claude Code or Codex CLI) outside of the IDE, or integrate it into headless environments.
+### Standalone MCP installer
 
-```bash
-npx -y @posidev-community/ptai-mcp install
-```
+If you do not use an IDE, you can install an MCP server as a standalone npm package `@posidev-community/ptai-mcp`. This is helpful if you work with terminal AI agents (such as Claude Code or Codex CLI) outside an IDE or want to integrate scanning into headless environments.
 
-### GenAI Code Gates (AI Hooks)
+This package requires Node.js 18 or later.
 
-AI hooks provide a proactive defense mechanism. Instead of waiting for a manual scan, the AI agent is forced to validate its generated code against the local analyzer before providing the final answer. 
+To install an MCP server in standalone mode:
 
-To optimize performance, the plugin takes a lightweight snapshot before the agent's turn and compares it before triggering a scan. If no files were modified, the scan is skipped.
+1. Run the following command in the terminal:
 
-You can manage hooks per project:
-* To disable hooks for the current project, run the `PT Application Inspector: Disable AI Hooks for This Project` command.
-* To re-enable them, run the `PT Application Inspector: Enable AI Hooks for This Project` command.
+   ```bash
+   npx -y @posidev-community/ptai-mcp install
+   ```
 
-## Integration with PT AI Enterprise Edition
+### AI hooks (GenAI Code Gates)
 
-The PT Application Inspector plugin can be integrated with PT AI Enterprise Edition. The integration allows several team members to simultaneously work with vulnerabilities and their statuses in the IDE and PT AI Enterprise Edition web interface, thereby increasing code security.
+AI hooks provide proactive protection. An AI agent must check the code it generates with a local analyzer before issuing a final response. A hook is triggered when the agent finishes generating a response. An incremental scan starts automatically, and the agent receives a summary of the results, including the number of detected vulnerabilities broken down by severity and a list of affected files. If any of the files were modified by the agent, it requests details and fixes the vulnerabilities following a cycle: generated → checked → fixed.
+
+To save time and resources, the plugin takes a snapshot of the project files before running the agent. If no files have been changed by the time the response is complete, the scan is skipped.
+
+You can manage hooks for each project individually.
+
+To disable hooks for the current project:
+
+1. Run the command: `PT Application Inspector: Disable AI Hooks for This Project`.
+
+To enable hooks:
+
+1. Run the command: `PT Application Inspector: Enable AI Hooks for This Project`.
+
+## Integration with PT AI Enterprise Edition
+
+The PT Application Inspector plugin can be integrated with PT AI Enterprise Edition. The integration allows several team members to simultaneously work with vulnerabilities and their statuses in the IDE and the PT AI Enterprise Edition web interface, thereby increasing code security.
 
 To configure the integration:
 
@@ -268,7 +286,7 @@ For more information about the integration, see the PT AI Enterprise Edition Us
 
 If a project is a Git repository, the plugin uses a current branch as the local working branch. Local scan results, vulnerability statuses, and data on synchronization from PT AI Enterprise Server are associated with that branch.
 
-When you set up synchronization between a local project and a PT AI Enterprise Server project, you must select the branch on the server that matches a current local branch. You can map a different branch later using the command `PT Application Inspector: Change PT AI Server Project Branch` or by clicking the **Switch branch** button in the **PT AI SERVER** section.
+When you set up synchronization between a local project and a PT AI Enterprise Server project, you must select the branch on the server that matches a current local branch. You can map a different branch later using the command `PT Application Inspector: Switch PT AI Server Project Branch` or by clicking the **Switch branch** button in the **PT AI SERVER** section.
 
 Branch mapping is needed for the following operations:
 * Uploading source code to PT AI Enterprise Server
@@ -292,10 +310,10 @@ If the Git repository is not initialized, the option to select a remote branch i
 To start working with the plugin, you can enter the following commands into the command palette:
 * `PT Application Inspector: Scan Locally`. Start an incremental scan of a local project.
 * `PT Application Inspector: Start Full Local Scan`. Start a full scan of a local project.
-* `PT Application Inspector: Change PT AI Server Project Branch`. Change the PT AI Enterprise Server branch that matches a local working branch.
+* `PT Application Inspector: Switch PT AI Server Project Branch`. Change the PT AI Enterprise Server branch that matches a local working branch.
 * `PT Application Inspector: Scan Remotely and Save Results on Server`. Start a full scan of a project in PT AI Enterprise Server and save the results on the server (command for integration).
 * `PT Application Inspector: Scan Remotely Without Saving Results on Server`. Start a full scan of a project in PT AI Enterprise Server without saving the results on the server (command for integration).
-* `PT Application Inspector: Stop Scan`. Stop the scan.
+* `PT Application Inspector: Stop Scan`. Stop the current scan.
 * `PT Application Inspector: Stop Remote Scan`. Stop the remote scan of a project in PT AI Enterprise Server (command for integration).
 * `PT Application Inspector: Show Vulnerabilities`. You can also filter vulnerabilities by severity, confirmation, and suppression status. Only the vulnerabilities that match the selected filters will be displayed.
 * `PT Application Inspector: Enable`. Enable the plugin for the current project.
@@ -303,42 +321,42 @@ To start working with the plugin, you can enter the following commands into the 
 * `PT Application Inspector: Download Analyzer`. Download the latest version of the code analyzer.
 * `PT Application Inspector: Restart`. Restart the plugin.
 * `PT Application Inspector: Create .aiignore File`. Create an exclusion configuration file. In the `.aiignore` file, you can specify folders, files, and file formats to be excluded from scanning using the `.gitignore` file syntax. For more information, see [git-scm.com/docs/gitignore](https://git-scm.com/docs/gitignore).
-* `PT Application Inspector: Create Project Settings File`. Create the configuration file `aiproj.json`. In the file, you can change default scan settings. You can also use the **SkipGitIgnoreFiles** setting to exclude from scanning files and folders from the `.gitignore` file. By default, this setting is enabled.
+* `PT Application Inspector: Create Project Settings File`. Create the configuration file `.aiproj.json`. In the file, you can change default scan settings. You can also use the **SkipGitIgnoreFiles** setting to exclude from scanning files and folders from the `.gitignore` file. By default, this setting is enabled.
 * `PT Application Inspector: Connect to PT AI Server`. Connect to PT AI Enterprise Server (command for integration).
 * `PT Application Inspector: Reconnect to PT AI Server (Connected)`. Reconnect to PT AI Enterprise Server (command for integration).
 * `PT Application Inspector: Disconnect from PT AI Server`. Disconnect from PT AI Enterprise Server (command for integration).
 * `PT Application Inspector: PT AI Server Authentication`. Enter the authentication token (command for integration).
 * `PT Application Inspector: Manage Projects`. Display the list of projects from PT AI Enterprise Server (command for integration). With this command, you can select a project in PT AI Enterprise Server and connect your local project to it in Visual Studio Code.
-* `PT Application Inspector: Create PT AI Server Project`. Upload a local project from IDE to PT AI Enterprise Server (command for integration).
+* `PT Application Inspector: Create PT AI Server Project`. Upload a local project from the IDE to PT AI Enterprise Server (command for integration).
 * `PT Application Inspector: Pull scan results from PT AI server`. Fetch scan results from PT AI Enterprise Server (command for integration).
 * `PT Application Inspector: Push scan results to PT AI server`. Send scan results to PT AI Enterprise Server (command for integration).
 * `PT Application Inspector: Push source code to PT AI server`. Upload the source code of a local project to PT AI Enterprise Server (command for integration).
 * `PT Application Inspector: Run Assistant`. Run the assistant.
 * `PT Application Inspector: Stop Assistant`. Stop the assistant.
-* `PT Application Inspector: Connect to AI Agent`. Connect to an AI agent (Cursor, Claude Desktop, etc.) via MCP and set up security hooks.
-* `PT Application Inspector: Disable AI Hooks for This Project`. Disable GenAI Code Gates for the current project.
-* `PT Application Inspector: Enable AI Hooks for This Project`. Enable GenAI Code Gates for the current project.
+* `PT Application Inspector: Connect to AI Agent`. Connect the plugin to an AI agent (such as Cursor or Claude) via MCP and set up AI hooks.
+* `PT Application Inspector: Disable AI Hooks for This Project`. Disable AI hooks for the current project.
+* `PT Application Inspector: Enable AI Hooks for This Project`. Enable AI hooks for the current project.
 
 ### Plugin settings
 
 You can configure the plugin settings by clicking **Extensions** → **PT Application Inspector** → the gear button → **Settings** in the action panel.
 
 The plugin configuration page contains the following settings:
-* **Allow telemetry collection**. Collection of general scan information to be sent to PT AI Enterprise Edition. By default, this setting is enabled.
-* **Analyzer log level**. The severity level starting from which the code analyzer events will be logged. The default value is error.
+* **Allow telemetry collection**. Collection of general scan information to be sent to PT AI Enterprise Edition. By default, this setting is enabled.
+* **Analyzer log level**. The severity level starting from which the code analyzer events are logged. The default value is error.
 * **Automatically enable for any project**. Silent activation of the plugin when opening a project. By default, this setting is disabled.
 * **Developer mode**. Advanced plugin features. By default, this setting is disabled.
-* **Maximum number of stored log files**. The default value is 100.
+* **Maximum number of stored log files**. The default value is 100.  
 * **Number of days to store log files**. The default value is 30.
 * **Number of scan results**. Maximum number of scan results saved in the scan result history. The default value is 10. If the limit is exceeded, each new scan result deletes the oldest result.
-* **Trigger scan**. Start scan condition: manually on clicking a start button or automatically when a project file is changed. Default: manually.
-* **Use all available resources for scanning**. The use of all available RAM and CPU resources to increase scanning speed. By default, this setting is disabled.
+* **Trigger scan**. Start scan condition: manually when you click a start button or automatically when a project file is changed. Default: manually.
+* **Use all available resources for scanning**. The use of all available RAM and CPU resources to increase scanning speed. By default, this setting is enabled.
 * **Actions with new scan results on the PT AI server**. The behavior of the plugin when receiving new scan results from PT AI Enterprise Server if synchronization with the project is configured. The default value is **Notify about new results**.
 * **Run the assistant**. Activation of the assistant automatically after the first scan or manually by clicking the corresponding button. The default value is "Automatically after the first scan".
 * **Quick Fix menu**. Display of assistant tips. By default, this setting is enabled.
 * **Vulnerabilities to confirm or discard**. The number of vulnerabilities to be confirmed or discarded starting from which a notification from the assistant will be displayed. The default value is 15.
 * **Similar vulnerabilities**. The number of similar vulnerabilities starting from which a notification from the assistant will be displayed. The default value is 15.
-* **Suggest fixes**. Enabling the generation of AI recommendations for fixing vulnerabilities. By default, this setting is disabled. This and other advanced provider settings are specified on the **How to fix** tab, which can be accessed via the link in the setting description.
+* **Suggest fixes**. The enabling of AI recommendations for fixing vulnerabilities. By default, this setting is disabled. This and other advanced provider settings are configured on the **How to Fix** tab, which you can access by clicking the link in a setting description.
 
 ## Requirements
 
@@ -362,7 +380,7 @@ Supported macOS:
 
 ## Privacy statement
 
-By default, the PT Application Inspector plugin collects anonymous telemetry. This allows our specialists to improve the stability and performance of the product. They can optimize resource consumption and speed up scanning, find and fix errors across different IDE versions more quickly, and understand which features are used most often to improve the user experience.
+By default, the PT Application Inspector plugin collects anonymous telemetry. This allows our specialists to improve the stability and performance of the product. They can optimize resource consumption and speed up scanning, find and fix errors across different IDE versions more quickly, and understand which features are used most often to improve the user experience.
 
 Only technical metrics (interaction events, environment settings, and the main scanning settings) for the plugin and IDE are sent. Source code, credentials, tokens, and project contents are completely excluded. All data is transmitted over a secure HTTPS channel, processed anonymously, and not shared with third parties. It does not contain any confidential information.
 
