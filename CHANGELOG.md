@@ -1,3 +1,8 @@
+## [3.0.1]
+
+- Fixed telemetry collection bug.
+- Fixed MCP connection failures during long-running scans.
+
 ## [3.0.0]
 
 - Added an AI-driven Assistant feature to generate recommendations for fixing detected vulnerabilities. The recommendations are generated using OpenAI-compatible models, as well as models available through private proxies or deployed locally. The feature is available in the new **How to fix** tab and integrated into the Quick Fix mechanism.
