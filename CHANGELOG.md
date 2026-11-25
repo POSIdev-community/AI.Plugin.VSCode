@@ -1,3 +1,10 @@
+## [3.1.0]
+
+- Added support for PT AI Enterprise Edition API 6.4.0 and displaying race condition vulnerabilities.
+- Improved synchronization with PT AI Enterprise Server: missed updates to scan progress, results, vulnerability statuses, and permissions are recovered after temporary network outages.
+- Improved the CODE SCANNING tree with a Collapse All button, a pinned Select all row with bulk actions, and a context menu.
+- Improved How to Fix settings and fixed minor UI issues.
+
 ## [3.0.1]
 
 - Fixed telemetry collection bug.
